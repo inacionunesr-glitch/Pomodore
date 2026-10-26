@@ -76,7 +76,10 @@ async function requestNotificationPermission() {
 function notify(title: string, body: string) {
   if (!("Notification" in window)) return;
   if (Notification.permission !== "granted") return;
-  new Notification(title, { body, icon: "/favicon.svg" });
+  new Notification(title, {
+  body,
+  icon: `${import.meta.env.BASE_URL}favicon.svg`,
+  });
 }
 
 function beep() {
