@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <title>Pomodoro</title>
+  </head>
+  <body class="body">
+    <main id="app">
+      <h1 class="title">Pomodoro</h1>
+
+      <section class="time-viewer">
+        <h2 id="time-display">00:00:00</h2>
+      </section>
+
+      <section class="time-input">
+        <div class="field">
+          <div class="spin-wrap">
+            <input id="hours-input" type="number" min="0" max="99" step="1" placeholder="0" inputmode="numeric" />
+            <div class="spin-buttons">
+              <button type="button" class="spin-up" aria-label="Aumentar horas" data-target="hours-input">▲</button>
+              <button type="button" class="spin-down" aria-label="Diminuir horas" data-target="hours-input">▼</button>
+            </div>
+          </div>
+          <label for="hours-input">Horas</label>
+        </div>
+
+        <div class="field">
+          <div class="spin-wrap">
+            <input id="minutes-input" type="number" min="0" max="59" step="1" placeholder="0" inputmode="numeric" />
+            <div class="spin-buttons">
+              <button type="button" class="spin-up" aria-label="Aumentar minutos" data-target="minutes-input">▲</button>
+              <button type="button" class="spin-down" aria-label="Diminuir minutos" data-target="minutes-input">▼</button>
+            </div>
+          </div>
+          <label for="minutes-input">Minutos</label>
+        </div>
+
+        <div class="field">
+          <div class="spin-wrap">
+            <input id="seconds-input" type="number" min="0" max="59" step="1" placeholder="0" inputmode="numeric" />
+            <div class="spin-buttons">
+              <button type="button" class="spin-up" aria-label="Aumentar segundos" data-target="seconds-input">▲</button>
+              <button type="button" class="spin-down" aria-label="Diminuir segundos" data-target="seconds-input">▼</button>
+            </div>
+          </div>
+          <label for="seconds-input">Segundos</label>
+        </div>
+      </section>
+
+      <div class="buttons-div">
+        <button class="add-time">Add Time</button>
+        <button class="remove-time">Remove Time</button>
+        <button class="pause-time">Start</button>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
